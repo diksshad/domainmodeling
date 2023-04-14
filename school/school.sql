@@ -16,4 +16,29 @@ CREATE TABLE students (
 
 -- Create the rest of the tables
 
+CREATE TABLE teachers (
+  teacher_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT,
+  last_name TEXT,
+  bio TEXT
+);
 
+CREATE TABLE courses (
+  course_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  course_name TEXT,
+  course_description TEXT
+);
+
+CREATE TABLE sections (
+  section_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  section_day TEXT,
+  section_time TEXT,
+  section_course_id TEXT,
+  section_teacher_id TEXT
+);
+
+CREATE TABLE enrollments (
+  enrollment_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  section_id TEXT,
+  teacher_id TEXT
+);
